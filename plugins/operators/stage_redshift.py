@@ -50,12 +50,6 @@ class StageToRedshiftOperator(BaseOperator):
             s3_path,
             credentials.access_key,
             credentials.secret_key,
-            self.ignore_headers,
             self.json
         )
         redshift.run(formatted_sql)
-
-
-
-
-
