@@ -7,15 +7,15 @@ from airflow.operators import (StageToRedshiftOperator, LoadFactOperator,
 from helpers import SqlQueries
 
 default_args = {
-    'owner': 'udacity',
+    'owner': 'leviob',
     'depends_on_past':False,
-    'start_date': datetime.now() - timedelta(hours=3), #datetime(2019, 1, 12),
+    'start_date': datetime.now() - timedelta(hours=10), #datetime(2019, 1, 12),
     'retries': 3,
     'retry_delay': timedelta(minutes=5),
     'catchup':False
 }
 
-dag = DAG('udac_example_dag',
+dag = DAG('redshift_dag',
           default_args=default_args,
           description='Load and transform data in Redshift with Airflow',
           schedule_interval='@hourly'
@@ -118,4 +118,3 @@ load_artist_dimension_table >> run_quality_checks
 load_time_dimension_table >> run_quality_checks
 
 run_quality_checks >> end_operator
-
