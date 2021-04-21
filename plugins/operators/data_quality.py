@@ -17,7 +17,7 @@ class DataQualityOperator(BaseOperator):
         self.data_quality_checks = data_quality_checks
 
     def execute(self, context):
-        redshift = PostgresHook(redshift_conn_id=self.redshift_conn_id)
+        redshift = PostgresHook('redshift')
         
         for check in self.data_quality_checks:
             sql = check.get('check_sql')
