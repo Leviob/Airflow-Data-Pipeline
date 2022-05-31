@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-Suppose a hypothetical music streaming company has decided that it is time to introduce more automation and monitoring to their data warehouse ETL pipelines. In this project, I use Apache Airflow to create a dynamic data pipeline that is built from reusable tasks, can be monitored, and allow easy backfills. The resulting tasts and DAG structure is shown below. 
+Suppose a hypothetical music streaming company has decided that it is time to introduce more automation and monitoring to their data warehouse ETL pipelines. In this project, I use Apache Airflow to create a dynamic data pipeline that is built from reusable tasks, can be monitored, and allow easy backfills. The resulting tasks and DAG structure is shown below. 
 
 ![DAG Graph View](https://user-images.githubusercontent.com/59812528/115166070-1d15ac00-a066-11eb-8a62-c6bff4431e81.png)
 
